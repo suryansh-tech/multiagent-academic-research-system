@@ -49,8 +49,7 @@ div[data-testid="stSelectbox"] div[data-baseweb="select"] {
     border-radius: 0 !important; 
     box-shadow: none !important;
 }
-div[data-testid="stTextInput"] input, 
-div[data-testid="stSelectbox"] div[class*="content"] { 
+div[data-testid="stTextInput"] input { 
     font-size: 1rem !important; 
     font-weight: 300 !important; 
     color: #000000 !important; 
