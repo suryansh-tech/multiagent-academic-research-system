@@ -34,7 +34,7 @@ html, body, [class*="css"] {
         linear-gradient(to right, #f0f0f0 1px, transparent 1px),
         linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
 }
-* { border-radius: 0 !important; box-shadow: none !important; }
+
 
 #MainMenu, footer, header { visibility: hidden; }
 .block-container { padding: 2rem 3rem 4rem; max-width: 1000px; }
@@ -72,7 +72,7 @@ div[data-testid="stFileUploader"] > section {
     background: #f9f9f9 !important;
     padding: 1rem !important;
 }
-div[data-baseweb="select"] span { padding-left: 0 !important; }
+
 
 .stButton > button { background: #000000 !important; color: #ffffff !important; font-family: 'JetBrains Mono', monospace !important; font-size: 10px !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.1em !important; border: 1px solid #000000 !important; padding: 0.8rem 1.5rem !important; transition: background 0.2s !important; width: 100%; border-radius: 0 !important; box-shadow: none !important; }
 .stButton > button:hover { background: #333333 !important; }
