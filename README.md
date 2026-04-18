@@ -24,7 +24,23 @@ Our platform abandons basic LLM retrieval for a deterministic, cyclic, and heavi
 
 ## 🏗️ Architectural Execution Tree
 
-The execution module relies on an asynchronous LangGraph graph configuration:
+```mermaid
+graph TD
+    A[User Input & PDF Ingestion] --> B{Search Agent}
+    B -->|General Queries| C[Tavily Web Search]
+    B -->|Technical/STEM| D[ArXiv API Extraction]
+    C --> E[Reader Agent]
+    D --> E
+    E --> F[Tutor/Writer Agent]
+    F -->|Quick / Tutor Mode| G((Final Output))
+    F -->|Standard / Deep Dive| H[Adversarial Critic Chain]
+    H --> I[Revision Writer]
+    I -->|Standard Mode| G
+    I -->|Deep Dive Mode| J[Fact-Checker Verification]
+    J --> G
+```
+
+The execution module relies on an asynchronous LangGraph configuration:
 1.  **Search Node [Agent]:** Diagnoses the raw prompt. Determines API routings (e.g., standard `tavily` web queries vs. heavy `arxiv` paper indexing).
 2.  **Reader Node [Agent]:** Scrapes raw HTML payloads from search outputs, filtering DOM noise.
 3.  **Writer/Tutor Node [Agent]:** Aggregates cross-domain findings into densely structured semantic reports utilizing aggressive Markdown syntax constraints.
