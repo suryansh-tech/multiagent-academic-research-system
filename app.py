@@ -41,8 +41,7 @@ html, body, [class*="css"] {
 
 /* Overrides */
 .stTextInput { padding-bottom: 0.8rem !important; }
-div[data-testid="stTextInput"] div[data-baseweb="input"], 
-div[data-testid="stSelectbox"] div[data-baseweb="select"] { 
+div[data-testid="stTextInput"] div[data-baseweb="input"] { 
     background-color: #f5f5f5 !important; 
     border: none !important; 
     border-bottom: 1px solid #d4d4d4 !important; 
@@ -55,8 +54,7 @@ div[data-testid="stTextInput"] input {
     color: #000000 !important; 
     padding-left: 0 !important;
 }
-div[data-testid="stTextInput"] div[data-baseweb="input"]:focus-within, 
-div[data-testid="stSelectbox"] div[data-baseweb="select"]:focus-within { 
+div[data-testid="stTextInput"] div[data-baseweb="input"]:focus-within { 
     border-bottom: 1px solid #000000 !important; 
 }
 label[data-testid="stWidgetLabel"] p {
